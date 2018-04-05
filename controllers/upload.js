@@ -48,14 +48,14 @@ module.exports = app => {
                 });
 
                 modelinfo.textures = textures;
-                let modelJSONstring= JSON.stringify(modelinfo);
-                console.log('Model info: ');
-                console.log(modelJSONstring);
 
-                // TODO: Create DAO and save the new model info --igorcouto 04/04/2018
+                // TODO: Create DAO and save the new model info modelJSONstring --igorcouto 04/04/2018
+                let modelJSONstring= JSON.stringify(modelinfo);
+
+                const generatedURL = path.join('./','views', 'display', modelinfo.folder ,modelinfo.name);
 
                 // TODO: Send as many textures as neccessary --igorcouto 03/04/2018
-                //response.render('display', { modelName : files[0][1].name, textureName : 'hat_mario_color.png' } );
+                response.render('display/display', { modelName : modelinfo.name, textures : modelinfo.textures } );
             });
         form.parse(request);
     });

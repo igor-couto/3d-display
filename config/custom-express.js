@@ -6,6 +6,7 @@ const path = require('path');
 module.exports = () => {
     let app = express();
 
+    // TODO: Put miiddleware stuff in appropriate place --igorcouto 05/04/2018
     // Create Logger Middleware
     let logger = (request, response, next) => {
         console.log("new request on : " + request.url + " by: " + request.hostname);
