@@ -1,0 +1,21 @@
+{
+  "name": "3d-display",
+  "version": "1.0.0",
+  "description": "Web Display for 3D models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "3d"
+  ],
+  "author": "Igor Couto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "formidable": "^1.2.1"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%= modelName%></title>
+
+        <style>
+            body {
+                font-family: Monospace;
+                background-color: #000;
+                color: #fff;
+                margin: 0px;
+                overflow: hidden;
+            }
+            #info {
+                color: #fff;
+                position: absolute;
+                top: 10px;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                display:block;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="info">
+            Display test
+        </div>
+
+    </body>
+
+    <script type="application/javascript" src="js/three.js"></script>
+    <script type="application/javascript" src="js/loaders/OBJLoader.js"></script>
+    <script type="application/javascript" src="js/display.js"></script>
+    <script>
+        init('<%=modelName%>', '<%=textureName%>');
+    </script>
+</html>
