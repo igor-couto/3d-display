@@ -55,7 +55,7 @@ module.exports = app => {
                 const generatedURL = path.join('./','views', 'display', modelinfo.folder ,modelinfo.name);
 
                 // TODO: Send as many textures as neccessary --igorcouto 03/04/2018
-                response.render('display/display', { modelName : modelinfo.name, textures : modelinfo.textures } );
+                response.render('display/display', { modelName : modelinfo.modelname, textures : modelinfo.textures } );
             });
         form.parse(request);
     });

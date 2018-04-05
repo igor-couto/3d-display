@@ -24,7 +24,7 @@ function init(modelName, textureName) {
         console.log( item, loaded, total );
     };
     let textureLoader = new THREE.TextureLoader( manager );
-    let texture = textureLoader.load( './files/' + textureName );
+    let texture = textureLoader.load( 'display/files/' + textureName );
     // model
     let onProgress = function ( xhr ) {
         if ( xhr.lengthComputable ) {
@@ -35,7 +35,7 @@ function init(modelName, textureName) {
     let onError = function ( xhr ) {
     };
     let loader = new THREE.OBJLoader( manager );
-    loader.load( './files/' + modelName, function ( object ) {
+    loader.load( 'display/files/' + modelName, function ( object ) {
         object.traverse( function ( child ) {
             if ( child instanceof THREE.Mesh ) {
                 child.material.map = texture;
