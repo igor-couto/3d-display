@@ -8,26 +8,23 @@ module.exports = app => {
     app.post('/upload', (request, response) => {
         let form = new formidable.IncomingForm();
         let files = [];
-        let fields = [];
 
         let modelinfo = new Object();
         let textures = [];
 
         form
             .on('field', (field, value) => {
-                fields.push([field, value]);
+                if ( field === 'modelName') {
+                    modelinfo.name = value;
+                } else
+                if ( field === 'folder' ) {
+                    modelinfo.folder = value;
+                }
             })
             .on('file', (field, file) => {
                 files.push(file);
             })
             .on('end',  () => {
-
-                let name ='';
-                modelinfo.name = name;
-
-                let folder = '';
-                modelinfo.folder = folder;
-
                 files.forEach( newfile => {
                     let tempPath = String(newfile.path);
                     let newpath = path.join(pathtosave, newfile.name);
@@ -40,7 +37,7 @@ module.exports = app => {
                         console.log(' - Texture found: ' + newfile.name);
                     } else
                     if ( extension === '.obj'  ) {
-                        console.log('- Obj found: '+ newfile.name)
+                        console.log('- Obj found: '+ newfile.name);
                         modelinfo.modelname = newfile.name; // TODO: Remove extension;
                         modelinfo.extension = extension;
                     }
@@ -54,7 +51,6 @@ module.exports = app => {
 
                 const generatedURL = path.join('./','views', 'display', modelinfo.folder ,modelinfo.name);
 
-                // TODO: Send as many textures as neccessary --igorcouto 03/04/2018
                 response.render('display/display', { modelName : modelinfo.modelname, textures : modelinfo.textures } );
             });
         form.parse(request);
