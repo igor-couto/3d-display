@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="display.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/display/js/display.js">
+      <file leaf-file-name="display.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/display/display.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="391">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -66,11 +66,11 @@
         <option value="$PROJECT_DIR$/views/display.ejs" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config/custom-express.js" />
-        <option value="$PROJECT_DIR$/views/display/display.ejs" />
         <option value="$PROJECT_DIR$/controllers/display.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/controllers/upload.js" />
         <option value="$PROJECT_DIR$/views/display/js/display.js" />
+        <option value="$PROJECT_DIR$/controllers/upload.js" />
+        <option value="$PROJECT_DIR$/views/display/display.ejs" />
       </list>
     </option>
   </component>
@@ -195,12 +195,12 @@
       <workItem from="1522896541239" duration="323000" />
       <workItem from="1522897476260" duration="2243000" />
       <workItem from="1522926077303" duration="1158000" />
-      <workItem from="1522964738300" duration="6166000" />
+      <workItem from="1522964738300" duration="7750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42365000" />
+    <option name="totallyTimeSpent" value="43949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -495,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -509,17 +502,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/display/display.ejs">
+    <entry file="file://$PROJECT_DIR$/views/display/js/display.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="1848">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/display/js/display.js">
+    <entry file="file://$PROJECT_DIR$/controllers/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="702">
+          <caret line="51" column="74" lean-forward="true" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/display/display.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
