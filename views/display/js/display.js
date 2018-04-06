@@ -1,8 +1,10 @@
 let container;
 let camera, scene, renderer;
-let mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
+
+let rotationspeed = 0.03;
+let object;
 
 
 function init(modelName, textureName) {
@@ -35,13 +37,16 @@ function init(modelName, textureName) {
     let onError = function ( xhr ) {
     };
     let loader = new THREE.OBJLoader( manager );
-    loader.load( 'display/files/' + modelName, function ( object ) {
+    loader.load( 'display/files/' + modelName, function ( model ) {
+        object = model;
         object.traverse( function ( child ) {
             if ( child instanceof THREE.Mesh ) {
                 child.material.map = texture;
             }
         } );
-        object.position.y = - 95;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
         scene.add( object );
     }, onProgress, onError );
 
@@ -49,7 +54,6 @@ function init(modelName, textureName) {
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
     container.appendChild( renderer.domElement );
-    document.addEventListener( 'mousedown', onDocumentMouseMove, false );
 
     window.addEventListener( 'resize', onWindowResize, false );
 
@@ -64,19 +68,13 @@ function onWindowResize() {
     renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
-function onDocumentMouseMove( event ) {
-    mouseX = ( event.clientX - windowHalfX ) / 2;
-    mouseY = ( event.clientY - windowHalfY ) / 2;
-}
-//
 function animate() {
     requestAnimationFrame( animate );
     render();
 }
 
 function render() {
-    camera.position.x += ( mouseX - camera.position.x ) * .05;
-    camera.position.y += ( - mouseY - camera.position.y ) * .05;
+    object.rotateY(rotationspeed);
     camera.lookAt( scene.position );
     renderer.render( scene, camera );
 }

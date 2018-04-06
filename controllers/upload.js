@@ -48,9 +48,7 @@ module.exports = app => {
 
                 // TODO: Create DAO and save the new model info modelJSONstring --igorcouto 04/04/2018
                 let modelJSONstring= JSON.stringify(modelinfo);
-
                 const generatedURL = path.join('./','views', 'display', modelinfo.folder ,modelinfo.name);
-
                 response.render('display/display', { modelName : modelinfo.modelname, textures : modelinfo.textures } );
             });
         form.parse(request);
